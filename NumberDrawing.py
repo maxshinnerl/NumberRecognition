@@ -23,12 +23,16 @@ while True: # main game loop
 
     pygame.display.update()
 
-    clicking = pygame.mouse.get_pressed()[0]  # func gets data for all mouse buttons
-                                              # [0] gets only left click
+    leftClicking = pygame.mouse.get_pressed()[0]  # func gets data for all mouse buttons
+                                                  # [0] gets only left click
     mpos = pygame.mouse.get_pos()
-    #  surface.set_at((mpos), BLACK)
+    
+    if leftClicking == 1:
 
-    if clicking == 1:
+        # Color 10 pixels in all directions from mouse when clicking
+        for x in range(20):
+            for y in range(20):
+                surface.set_at((mpos[0] + x - 10, mpos[1] + y - 10), BLACK)
 
-        surface.set_at((mpos), BLACK)
-        #  print (mpos)
+        # surface.set_at((mpos), BLACK)
+        
