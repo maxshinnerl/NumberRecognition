@@ -29,4 +29,6 @@ while True: # main game loop
     #  surface.set_at((mpos), BLACK)
 
     if clicking == 1:
-        mpos = surface.set_at((mpos), BLACK)
+
+        surface.set_at((mpos), BLACK)
+        #  print (mpos)
