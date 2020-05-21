@@ -1,3 +1,6 @@
+#  Simple pygame allowing user to draw numbers with their mouse
+#  Pixel data will be fed to machine learning (eventually)
+
 import pygame, sys
 from pygame.locals import *
 
@@ -5,7 +8,7 @@ pygame.init()
 
 surface = pygame.display.set_mode((400, 400))  # window size
 
-pygame.display.set_caption('Draw a Number')
+pygame.display.set_caption('Draw a Number | Right Click to Refresh')
 
 WHITE = pygame.Color(255,255,255)  # save WHITE RGB code
 BLACK = pygame.Color(0,0,0)
