@@ -3,13 +3,13 @@ from pygame.locals import *
 
 pygame.init()
 
-DISPLAYSURF = pygame.display.set_mode((400, 400))  # window size
+surface = pygame.display.set_mode((400, 400))  # window size
 
 pygame.display.set_caption('Draw a Number')
 
 WHITE = pygame.Color(255,255,255)  # save WHITE RGB code
 BLACK = pygame.Color(0,0,0)
-DISPLAYSURF.fill(WHITE)  # make background white
+surface.fill(WHITE)  # make background white
  
 while True: # main game loop
 
@@ -22,3 +22,6 @@ while True: # main game loop
             sys.exit()
 
     pygame.display.update()
+
+    mpos = pygame.mouse.get_pos()
+    surface.set_at((mpos), BLACK)
