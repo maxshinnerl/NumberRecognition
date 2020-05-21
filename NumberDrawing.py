@@ -25,6 +25,9 @@ while True: # main game loop
 
     leftClicking = pygame.mouse.get_pressed()[0]  # func gets data for all mouse buttons
                                                   # [0] gets only left click
+
+    rightClicking = pygame.mouse.get_pressed()[2] # get right click boolean
+
     mpos = pygame.mouse.get_pos()
     
     if leftClicking == 1:
@@ -35,4 +38,6 @@ while True: # main game loop
                 surface.set_at((mpos[0] + x - 10, mpos[1] + y - 10), BLACK)
 
         # surface.set_at((mpos), BLACK)
-        
+   
+    if rightClicking == 1:
+        surface.fill(WHITE) 
