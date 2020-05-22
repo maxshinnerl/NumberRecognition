@@ -4,3 +4,7 @@ drawn by the user in pygame (python library)
 Creator: Max Shinnerl
 
 Start Date: 5/20/20
+
+Libraries Used:
+pygame -- for number drawing
+TensorFlow -- for machine learning
