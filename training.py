@@ -5,6 +5,7 @@
 import tensorflow as tf
 from tensorflow import keras
 
+
 # helper libraries
 import numpy as np
 import matplotlib.pyplot as plt
@@ -21,6 +22,7 @@ mnist = keras.datasets.mnist
 # plt.imshow(train_images[0])
 # plt.colorbar()
 # plt.grid(False)
+
 # plt.show()
 
 class_names = ['Zero', 'One', 'Two', 'Three', 'Four',
@@ -41,6 +43,7 @@ test_images = test_images / 255.0
 #     plt.grid(False)
 #     plt.imshow(train_images[i], cmap=plt.cm.binary)
 #     plt.xlabel(class_names[train_labels[i]])
+
 # plt.show()
 
 # ====================================================
@@ -64,3 +67,11 @@ model.fit(train_images, train_labels, epochs=10)
 # compare to test dataset
 test_loss, test_acc = model.evaluate(test_images,  test_labels, verbose=2)
 print('\nTest accuracy:', test_acc)
+
+from NumberDrawing import numrec
+numrec()
+
+# TODO:  on right click, have numrec break loop and return the image data
+# then evaluate that single image data
+# see how to evaluate single image on:
+# tensorflow.org/tutorials/keras/classification and ctrl+f "single image"
